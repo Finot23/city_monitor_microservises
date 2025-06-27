@@ -10,7 +10,7 @@ def evaluar():
     temp = data['temperatura']
     calidad = data['calidad_aire']
 
-    if temp > 25 or calidad > 30:
+    if temp > 35 or calidad > 60:
         alerta = f"ALERTA en {barrio}: Temp={temp} °C, Calidad aire={calidad}"
         alertas.append(alerta)
         print(alerta)
