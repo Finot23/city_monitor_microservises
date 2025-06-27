@@ -11,7 +11,8 @@ El propósito de este sistema es monitorear variables ambientales (temperatura, 
 
 Diagrama de arquitectura de micro servicio
 
-![alt text](image.png)
+![alt text](imagenes/image.png)
+
 Arquitectura General
 
 
