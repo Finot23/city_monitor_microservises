@@ -6,7 +6,7 @@ app = Flask(__name__)
 def enviar_datos():
     while True:
         data = {
-            "barrio": "Centro",
+            "barrio": "cuajimalpa",
             "temperatura": round(random.uniform(20, 40), 2),
             "humedad": round(random.uniform(30, 80), 2),
             "calidad_aire": round(random.uniform(10, 100), 2)
