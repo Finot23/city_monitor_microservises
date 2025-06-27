@@ -89,3 +89,4 @@ Conclusiones
 
 
 La solución propuesta permite simular un sistema distribuido funcional, modular y escalable. Se puede extender fácilmente para soportar nuevos barrios, almacenamiento persistente y visualización en tiempo real. Docker permite levantar todo el ecosistema rápidamente, ideal para entornos de desarrollo y pruebas.
+
