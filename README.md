@@ -1,6 +1,5 @@
 # city_monitor_microservises
 Proyecto de Sistemas distribuidos
-
 Nombre del los autores: [Andres Mateo Dorantes, Jose Abraham Marin Sanchez, Luis Antonio Salinas Mata]
  Fecha: [27/062025]
 UEA: [Sistemas distribuidos]
