@@ -8,6 +8,10 @@ Objetivo del Proyecto
 
 
 El propósito de este sistema es monitorear variables ambientales (temperatura, humedad y calidad del aire) en tiempo real en diferentes barrios de una ciudad mediante una arquitectura de microservicios. La solución utiliza Python, Flask, JSON y Docker para simular sensores, almacenar datos, detectar alertas y permitir consultas a través de una API.
+
+Diagrama de arquitectura de micro servicio
+
+![alt text](image.png)
 Arquitectura General
 
 
