@@ -19,7 +19,7 @@ services:
     ports:
       - "5002:5002"
 
-  alert_service:
+  alert_services:
     build: ./alert_service
     ports:
       - "5003:5003"
