@@ -1,96 +1,76 @@
 # city_monitor_microservises
-Proyecto de Sistemas distribuidos
-Nombre del los autores: [Andres Mateo Dorantes, Jose Abraham Marin Sanchez, Luis Antonio Salinas Mata]
- Fecha: [27/062025]
-UEA: [Sistemas distribuidos]
+# 🛰️ Proyecto: Sistema Distribuido para Monitoreo Ambiental
 
-Objetivo del Proyecto
+**Autores:** Andrés Mateo Dorantes, José Abraham Marín Sánchez, Luis Antonio Salinas Mata  
+**Fecha:** 27/06/2025  
+**UEA:** Sistemas Distribuidos  
 
+## 🎯 Objetivo
 
-El propósito de este sistema es monitorear variables ambientales (temperatura, humedad y calidad del aire) en tiempo real en diferentes barrios de una ciudad mediante una arquitectura de microservicios. La solución utiliza Python, Flask, JSON y Docker para simular sensores, almacenar datos, detectar alertas y permitir consultas a través de una API.
+Desarrollar un sistema distribuido que monitoree variables ambientales (temperatura, humedad y calidad del aire) en distintos barrios mediante una arquitectura de microservicios.  
+La solución está construida con **Python**, **Flask**, **Docker**, y comunica los servicios por **HTTP REST** usando **JSON**.
 
-Diagrama de arquitectura de micro servicio
+---
 
-![alt text](imagenes/image.png)
+## 🧩 Arquitectura de Microservicios
 
-Arquitectura General
+El sistema está compuesto por los siguientes servicios:
 
+- `sensor_service`: simula sensores y envía datos periódicamente.
+- `collector_service`: recibe y redirige los datos a los servicios correspondientes.
+- `storage_service`: guarda mediciones por barrio y expone una API de consulta.
+- `alert_service`: evalúa los datos y genera alertas por valores extremos.
+- `frontend_service` (opcional): interfaz web para consultar datos y alertas.
 
-La arquitectura está compuesta por cinco microservicios que se comunican vía HTTP REST con formato JSON, orquestados mediante Docker Compose. A continuación se resumen:
-sensor_service: Simula sensores ambientales por barrio y envía datos periódicamente.
+📌 Diagrama de arquitectura:  
+![Arquitectura](ruta/a/tu/imagen.png) <!-- Asegúrate de subir la imagen al repo -->
 
+---
 
-collector_service: Recibe datos de sensores y los reenvía a los servicios correspondientes.
+## 🛠️ Tecnologías Usadas
 
+- Lenguaje: Python 3.10+
+- Framework: Flask
+- Comunicación: HTTP REST (`requests`)
+- Contenedores: Docker y Docker Compose
+- Formato de datos: JSON
 
-storage_service: Guarda las mediciones por barrio y expone una API para consultarlas.
+---
 
+## 🚨 Generación de Alertas
 
-alert_service: Detecta valores extremos y registra alertas.
+Las alertas se generan cuando:
 
+- Temperatura > 35 °C  
+- Humedad < 20% o > 80%  
+- Calidad del aire > 90
 
-(Insertar diagrama aquí: arquitectura de microservicios, nombres de servicios, flujos HTTP)
+Ejemplo de salida:
 
-Tecnologías Utilizadas
+---
 
+## 📡 API de Consulta (`storage_service`)
 
-Lenguaje: Python 3.10+
+| Método | Ruta                        | Descripción                            |
+|--------|-----------------------------|----------------------------------------|
+| GET    | `/barrio/<nombre>`          | Últimas mediciones del barrio          |
+| GET    | `/promedio/<nombre>`        | Promedios de temperatura, humedad, aire|
+| GET    | `/todos` *(opcional)*       | Todas las mediciones almacenadas       |
 
+---
 
-Framework web: Flask
+## 🚀 Ejecución rápida
 
-
-Comunicación: HTTP REST (requests + Flask)
-
-
-Orquestación: Docker y Docker Compose
-
-
-Formato de datos: JSON
-
-
-
-
-Generación de Alertas
-
-
-El servicio alert_service evalúa las mediciones y genera una alerta si se detecta alguna condición crítica, como:
-Temperatura > 35 °C
-
-
-Humedad < 20% o > 80%
-
-
-Calidad del aire > 90 (escala arbitraria)
-
-
-Las alertas se imprimen por consola y se almacenan para su consulta.
-Ejemplo de alerta generada:
-[ALERTA] Barrio: Centro — Temperatura crítica: 38.2 °C
-(Captura de pantalla de consola o registro .log aquí)
-API de Consulta
-
-
-El servicio storage_service expone los siguientes endpoints:
-GET /barrio/<nombre>: Devuelve las últimas mediciones del barrio.
-
-
-GET /promedio/<nombre>: Devuelve el promedio de cada variable del barrio.
-
-
-GET /todos (opcional): Devuelve todos los datos almacenados.
-
-
-Ejemplo de respuesta:
-{
- "barrio": "Centro",
- "promedios": {
- "temperatura": 26.8,
- "humedad": 58.2,
- "calidad_aire": 43.5
- }
- }
-Conclusiones
+1. Clona el repositorio:
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
+cd tu-repo
+```
+2. Ahora levanta los servicios en Docker
+```bash
+docker-compose up --build
+```
+3. Visualiza las alertas en consola y consulta los endpoints con Postman o navegador.
 
 
 La solución propuesta permite simular un sistema distribuido funcional, modular y escalable. Se puede extender fácilmente para soportar nuevos barrios, almacenamiento persistente y visualización en tiempo real. Docker permite levantar todo el ecosistema rápidamente, ideal para entornos de desarrollo y pruebas.
