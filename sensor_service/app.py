@@ -12,7 +12,7 @@ def enviar_datos():
             "calidad_aire": round(random.uniform(10, 100), 2)
         }
         try:
-            response = requests.post("http://collector_service:5000/datos", json=data)
+            response = requests.post("http://collector_service:5010/datos", json=data)
             print("Datos enviados:", data)
         except Exception as e:
             print("Error enviando datos:", e)

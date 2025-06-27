@@ -12,7 +12,7 @@ def recibir_datos():
     requests.post("http://storage_service:5011/guardar", json=data)
 
     # Enviar a alert_service
-    requests.post("http://alert_service:5012/evaluar", json=data)
+    requests.post("http://alert_services:5012/evaluar", json=data)
 
     return jsonify({"status": "ok"})
 
