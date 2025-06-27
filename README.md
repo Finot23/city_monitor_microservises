@@ -23,7 +23,7 @@ El sistema está compuesto por los siguientes servicios:
 - `frontend_service` (opcional): interfaz web para consultar datos y alertas.
 
 📌 Diagrama de arquitectura:  
-![Arquitectura](ruta/a/tu/imagen.png) <!-- Asegúrate de subir la imagen al repo -->
+![Arquitectura](imagenes/image.png) <!-- Asegúrate de subir la imagen al repo -->
 
 ---
 
