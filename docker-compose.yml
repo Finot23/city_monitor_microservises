@@ -12,7 +12,7 @@ services:
       - "5000:5000"
     depends_on:
       - storage_service
-      - alert_service
+      - alert_services
 
   storage_service:
     build: ./storage_service
@@ -20,6 +20,6 @@ services:
       - "5002:5002"
 
   alert_services:
-    build: ./alert_service
+    build: ./alert_services
     ports:
       - "5003:5003"
