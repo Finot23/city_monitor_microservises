@@ -9,7 +9,7 @@ services:
   collector_service:
     build: ./collector_service
     ports:
-      - "5000:5000"
+      - "5010:5010"
     depends_on:
       - storage_service
       - alert_services
@@ -17,9 +17,9 @@ services:
   storage_service:
     build: ./storage_service
     ports:
-      - "5002:5002"
+      - "5011:5011"
 
   alert_services:
     build: ./alert_services
     ports:
-      - "5003:5003"
+      - "5012:5012"
