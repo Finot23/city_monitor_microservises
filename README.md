@@ -72,6 +72,11 @@ docker-compose up --build
 ```
 3. Visualiza las alertas en consola y consulta los endpoints con Postman o navegador.
 
+resultados del local hos barrio cuajimalpa
+![alt text](<imagenes/Captura de pantalla 2025-06-27 173756.png>)
+
+resultados de las alertas
+![alt text](<imagenes/Captura de pantalla 2025-06-27 173802.png>)
 
 La solución propuesta permite simular un sistema distribuido funcional, modular y escalable. Se puede extender fácilmente para soportar nuevos barrios, almacenamiento persistente y visualización en tiempo real. Docker permite levantar todo el ecosistema rápidamente, ideal para entornos de desarrollo y pruebas.
 
