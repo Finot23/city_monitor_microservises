@@ -43,7 +43,7 @@ Las alertas se generan cuando:
 
 - Temperatura > 35 °C  
 - Humedad < 20% o > 80%  
-- Calidad del aire > 90
+- Calidad del aire > 60
 
 Ejemplo de salida:
 
@@ -63,8 +63,8 @@ Ejemplo de salida:
 
 1. Clona el repositorio:
 ```bash
-git clone https://github.com/tu-usuario/tu-repo.git
-cd tu-repo
+git clone https://github.com/Finot23/city_monitor_microservises
+cd city_monitor_microservises
 ```
 2. Ahora levanta los servicios en Docker
 ```bash
